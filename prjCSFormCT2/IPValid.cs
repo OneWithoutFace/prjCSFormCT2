@@ -13,9 +13,14 @@ namespace prjCSFormCT2
 {
     public partial class IPValid : Form
     {
+        DateTime dateNow = DateTime.Today;
+        int timerSecs;
+
         public IPValid()
         {
             InitializeComponent();
+            timerDurrWin.Start();
+            labelCurrentDate.Text =Convert.ToString(dateNow.ToShortDateString());
         }
 
         private void btnConv_Click(object sender, EventArgs e)
@@ -57,10 +62,28 @@ namespace prjCSFormCT2
         {
             if (MessageBox.Show("Do you want to return to the Dashboard ?", "Ip-validator Exit", MessageBoxButtons.YesNo).ToString()=="Yes")
             {
+                timerDurrWin.Stop();
+                TimeSpan timeOnWin = TimeSpan.FromSeconds(timerSecs);
+                string timeId;
+                string timerFormated = timeOnWin.ToString(@"mm\:ss");
+                if (timerSecs < 60)
+                {
+                    timeId = "seconds";
+                }
+                else
+                {
+                    timeId = "minutes";
+                }
 
+                MessageBox.Show("You were on the IP-Validator for: " + timerFormated + " " + timeId, "", MessageBoxButtons.OK);
                 this.Close();
 
             }
+        }
+
+        private void timerDurrWin_Tick(object sender, EventArgs e)
+        {
+            timerSecs += 1;
         }
     }
 }

@@ -30,6 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.imgCNY = new System.Windows.Forms.PictureBox();
+            this.imgGBP = new System.Windows.Forms.PictureBox();
+            this.imgEUR = new System.Windows.Forms.PictureBox();
+            this.imgUSD = new System.Windows.Forms.PictureBox();
+            this.imgCAD = new System.Windows.Forms.PictureBox();
             this.rbtnIN = new System.Windows.Forms.RadioButton();
             this.rbtnGBPIN = new System.Windows.Forms.RadioButton();
             this.rbtnEURIN = new System.Windows.Forms.RadioButton();
@@ -40,30 +45,25 @@
             this.btnRead = new System.Windows.Forms.Button();
             this.exitbtn = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.rbtnOUT = new System.Windows.Forms.RadioButton();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.rbtnGBPOUT = new System.Windows.Forms.RadioButton();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.rbtnEUROUT = new System.Windows.Forms.RadioButton();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.rbtnUSDOUT = new System.Windows.Forms.RadioButton();
             this.rbtnCADOut = new System.Windows.Forms.RadioButton();
             this.tBoxConvert = new System.Windows.Forms.TextBox();
             this.TimerDurrWindow = new System.Windows.Forms.Timer(this.components);
-            this.imgCAD = new System.Windows.Forms.PictureBox();
-            this.imgUSD = new System.Windows.Forms.PictureBox();
-            this.imgEUR = new System.Windows.Forms.PictureBox();
-            this.imgGBP = new System.Windows.Forms.PictureBox();
-            this.imgCNY = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imgCAD)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgUSD)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgEUR)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgGBP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgCNY)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgGBP)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgEUR)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgUSD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgCAD)).BeginInit();
+            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -90,6 +90,61 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "From";
+            // 
+            // imgCNY
+            // 
+            this.imgCNY.BackgroundImage = global::prjCSFormCT2.Properties.Resources.ChinaFlag;
+            this.imgCNY.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.imgCNY.Cursor = System.Windows.Forms.Cursors.Default;
+            this.imgCNY.Location = new System.Drawing.Point(73, 137);
+            this.imgCNY.Name = "imgCNY";
+            this.imgCNY.Size = new System.Drawing.Size(27, 24);
+            this.imgCNY.TabIndex = 10;
+            this.imgCNY.TabStop = false;
+            // 
+            // imgGBP
+            // 
+            this.imgGBP.BackgroundImage = global::prjCSFormCT2.Properties.Resources.gpd;
+            this.imgGBP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.imgGBP.Cursor = System.Windows.Forms.Cursors.Default;
+            this.imgGBP.Location = new System.Drawing.Point(73, 110);
+            this.imgGBP.Name = "imgGBP";
+            this.imgGBP.Size = new System.Drawing.Size(27, 24);
+            this.imgGBP.TabIndex = 9;
+            this.imgGBP.TabStop = false;
+            // 
+            // imgEUR
+            // 
+            this.imgEUR.BackgroundImage = global::prjCSFormCT2.Properties.Resources.euro;
+            this.imgEUR.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.imgEUR.Cursor = System.Windows.Forms.Cursors.Default;
+            this.imgEUR.Location = new System.Drawing.Point(73, 82);
+            this.imgEUR.Name = "imgEUR";
+            this.imgEUR.Size = new System.Drawing.Size(27, 24);
+            this.imgEUR.TabIndex = 8;
+            this.imgEUR.TabStop = false;
+            // 
+            // imgUSD
+            // 
+            this.imgUSD.BackgroundImage = global::prjCSFormCT2.Properties.Resources.usa;
+            this.imgUSD.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.imgUSD.Cursor = System.Windows.Forms.Cursors.Default;
+            this.imgUSD.Location = new System.Drawing.Point(73, 54);
+            this.imgUSD.Name = "imgUSD";
+            this.imgUSD.Size = new System.Drawing.Size(27, 24);
+            this.imgUSD.TabIndex = 7;
+            this.imgUSD.TabStop = false;
+            // 
+            // imgCAD
+            // 
+            this.imgCAD.BackgroundImage = global::prjCSFormCT2.Properties.Resources.cad;
+            this.imgCAD.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.imgCAD.Cursor = System.Windows.Forms.Cursors.Default;
+            this.imgCAD.Location = new System.Drawing.Point(73, 25);
+            this.imgCAD.Name = "imgCAD";
+            this.imgCAD.Size = new System.Drawing.Size(27, 24);
+            this.imgCAD.TabIndex = 6;
+            this.imgCAD.TabStop = false;
             // 
             // rbtnIN
             // 
@@ -220,6 +275,17 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "To";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::prjCSFormCT2.Properties.Resources.ChinaFlag;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pictureBox1.Location = new System.Drawing.Point(136, 139);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(27, 24);
+            this.pictureBox1.TabIndex = 15;
+            this.pictureBox1.TabStop = false;
+            // 
             // rbtnOUT
             // 
             this.rbtnOUT.AutoSize = true;
@@ -232,6 +298,17 @@
             this.rbtnOUT.TabStop = true;
             this.rbtnOUT.Text = "CNY";
             this.rbtnOUT.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = global::prjCSFormCT2.Properties.Resources.gpd;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pictureBox2.Location = new System.Drawing.Point(136, 112);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(27, 24);
+            this.pictureBox2.TabIndex = 14;
+            this.pictureBox2.TabStop = false;
             // 
             // rbtnGBPOUT
             // 
@@ -246,6 +323,17 @@
             this.rbtnGBPOUT.Text = "GBP";
             this.rbtnGBPOUT.UseVisualStyleBackColor = true;
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackgroundImage = global::prjCSFormCT2.Properties.Resources.euro;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pictureBox3.Location = new System.Drawing.Point(136, 84);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(27, 24);
+            this.pictureBox3.TabIndex = 13;
+            this.pictureBox3.TabStop = false;
+            // 
             // rbtnEUROUT
             // 
             this.rbtnEUROUT.AutoSize = true;
@@ -258,6 +346,28 @@
             this.rbtnEUROUT.TabStop = true;
             this.rbtnEUROUT.Text = "EUR";
             this.rbtnEUROUT.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackgroundImage = global::prjCSFormCT2.Properties.Resources.usa;
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pictureBox4.Location = new System.Drawing.Point(136, 56);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(27, 24);
+            this.pictureBox4.TabIndex = 12;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackgroundImage = global::prjCSFormCT2.Properties.Resources.cad;
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pictureBox5.Location = new System.Drawing.Point(136, 27);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(27, 24);
+            this.pictureBox5.TabIndex = 11;
+            this.pictureBox5.TabStop = false;
             // 
             // rbtnUSDOUT
             // 
@@ -300,116 +410,8 @@
             // TimerDurrWindow
             // 
             this.TimerDurrWindow.Enabled = true;
-            // 
-            // imgCAD
-            // 
-            this.imgCAD.BackgroundImage = global::prjCSFormCT2.Properties.Resources.cad;
-            this.imgCAD.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.imgCAD.Cursor = System.Windows.Forms.Cursors.Default;
-            this.imgCAD.Location = new System.Drawing.Point(73, 25);
-            this.imgCAD.Name = "imgCAD";
-            this.imgCAD.Size = new System.Drawing.Size(27, 24);
-            this.imgCAD.TabIndex = 6;
-            this.imgCAD.TabStop = false;
-            // 
-            // imgUSD
-            // 
-            this.imgUSD.BackgroundImage = global::prjCSFormCT2.Properties.Resources.usa;
-            this.imgUSD.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.imgUSD.Cursor = System.Windows.Forms.Cursors.Default;
-            this.imgUSD.Location = new System.Drawing.Point(73, 54);
-            this.imgUSD.Name = "imgUSD";
-            this.imgUSD.Size = new System.Drawing.Size(27, 24);
-            this.imgUSD.TabIndex = 7;
-            this.imgUSD.TabStop = false;
-            // 
-            // imgEUR
-            // 
-            this.imgEUR.BackgroundImage = global::prjCSFormCT2.Properties.Resources.euro;
-            this.imgEUR.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.imgEUR.Cursor = System.Windows.Forms.Cursors.Default;
-            this.imgEUR.Location = new System.Drawing.Point(73, 82);
-            this.imgEUR.Name = "imgEUR";
-            this.imgEUR.Size = new System.Drawing.Size(27, 24);
-            this.imgEUR.TabIndex = 8;
-            this.imgEUR.TabStop = false;
-            // 
-            // imgGBP
-            // 
-            this.imgGBP.BackgroundImage = global::prjCSFormCT2.Properties.Resources.gpd;
-            this.imgGBP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.imgGBP.Cursor = System.Windows.Forms.Cursors.Default;
-            this.imgGBP.Location = new System.Drawing.Point(73, 110);
-            this.imgGBP.Name = "imgGBP";
-            this.imgGBP.Size = new System.Drawing.Size(27, 24);
-            this.imgGBP.TabIndex = 9;
-            this.imgGBP.TabStop = false;
-            // 
-            // imgCNY
-            // 
-            this.imgCNY.BackgroundImage = global::prjCSFormCT2.Properties.Resources.ChinaFlag;
-            this.imgCNY.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.imgCNY.Cursor = System.Windows.Forms.Cursors.Default;
-            this.imgCNY.Location = new System.Drawing.Point(73, 137);
-            this.imgCNY.Name = "imgCNY";
-            this.imgCNY.Size = new System.Drawing.Size(27, 24);
-            this.imgCNY.TabIndex = 10;
-            this.imgCNY.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::prjCSFormCT2.Properties.Resources.ChinaFlag;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureBox1.Location = new System.Drawing.Point(136, 139);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(27, 24);
-            this.pictureBox1.TabIndex = 15;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImage = global::prjCSFormCT2.Properties.Resources.gpd;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureBox2.Location = new System.Drawing.Point(136, 112);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(27, 24);
-            this.pictureBox2.TabIndex = 14;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackgroundImage = global::prjCSFormCT2.Properties.Resources.euro;
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureBox3.Location = new System.Drawing.Point(136, 84);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(27, 24);
-            this.pictureBox3.TabIndex = 13;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackgroundImage = global::prjCSFormCT2.Properties.Resources.usa;
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureBox4.Location = new System.Drawing.Point(136, 56);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(27, 24);
-            this.pictureBox4.TabIndex = 12;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackgroundImage = global::prjCSFormCT2.Properties.Resources.cad;
-            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureBox5.Location = new System.Drawing.Point(136, 27);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(27, 24);
-            this.pictureBox5.TabIndex = 11;
-            this.pictureBox5.TabStop = false;
+            this.TimerDurrWindow.Interval = 1000;
+            this.TimerDurrWindow.Tick += new System.EventHandler(this.TimerDurrWindow_Tick);
             // 
             // MoneyEx
             // 
@@ -428,13 +430,13 @@
             this.Text = "MoneyEx - Mickael";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgCNY)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgGBP)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgEUR)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgUSD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgCAD)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imgCAD)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgUSD)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgEUR)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgGBP)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgCNY)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();

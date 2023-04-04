@@ -12,6 +12,8 @@ namespace prjCSFormCT2
 {
     public partial class MoneyEx : Form
     {
+        int timerSecs;
+
         public MoneyEx()
         {
             InitializeComponent();
@@ -24,6 +26,12 @@ namespace prjCSFormCT2
         {
             string currIn="CAD", currOut="USD";
             double currAmountIn, currAmountOut;
+
+            if (tBoxUser.Text=="0")
+            {
+                MessageBox.Show("Enter a number to convert", "MoneyEx", MessageBoxButtons.OK);
+                return;
+            }
 
             currAmountIn =Convert.ToDouble( tBoxUser.Text);
             
@@ -107,7 +115,7 @@ namespace prjCSFormCT2
 
             currAmountOut=currConvToOut(convUSAm, currOut);
 
-            return currAmountOut;
+            return  currAmountOut;
         }
 
         public static double currConvToOut(double convUSAm,string currOut)
@@ -136,7 +144,7 @@ namespace prjCSFormCT2
                     currAmountOut = convUSAm * 6.82;
                     break;
             }
-            return currAmountOut;
+            return Math.Round( currAmountOut,2);
         }
 
         private void btnRead_Click(object sender, EventArgs e)
@@ -149,11 +157,29 @@ namespace prjCSFormCT2
         private void exitbtn_Click(object sender, EventArgs e)
         {
             TimerDurrWindow.Stop();
+            TimeSpan timeOnWin = TimeSpan.FromSeconds(timerSecs);
+            string timeId;
+            string timerFormated = timeOnWin.ToString(@"mm\:ss");
+
+            if (timerSecs<60)
+            {
+                timeId = "seconds";
+            }
+            else
+            {
+                timeId = "minutes";
+            }
+
             if (MessageBox.Show("Do you want to return to the Dashboard ?", "MoneyEx Exit", MessageBoxButtons.YesNo).ToString()=="Yes")
             {
                 this.Close();
-                MessageBox.Show("You were on the currency exchange for: " + TimerDurrWindow, "", MessageBoxButtons.OK);
+                MessageBox.Show("You were on the currency exchange for: " +timerFormated+" "+timeId, "", MessageBoxButtons.OK);
             }
+        }
+
+        private void TimerDurrWindow_Tick(object sender, EventArgs e)
+        {
+            timerSecs += 1;
         }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnConv = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
             this.exitbtn = new System.Windows.Forms.Button();
@@ -35,6 +36,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tBoxIp = new System.Windows.Forms.TextBox();
             this.labelCurrentDate = new System.Windows.Forms.Label();
+            this.timerDurrWin = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // btnConv
@@ -107,6 +109,11 @@
             this.labelCurrentDate.TabIndex = 20;
             this.labelCurrentDate.Text = "00-00-00";
             // 
+            // timerDurrWin
+            // 
+            this.timerDurrWin.Interval = 1000;
+            this.timerDurrWin.Tick += new System.EventHandler(this.timerDurrWin_Tick);
+            // 
             // IPValid
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -136,5 +143,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tBoxIp;
         private System.Windows.Forms.Label labelCurrentDate;
+        private System.Windows.Forms.Timer timerDurrWin;
     }
 }
