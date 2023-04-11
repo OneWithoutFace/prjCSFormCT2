@@ -206,7 +206,12 @@ namespace prjCSFormCT2
         {
             double result;
 
+
             result=Calculation.Equal(activeMem, Convert.ToDouble(calcDisplay.Text));
+
+
+            ReadWriteFile.writeSimpleText(@"./Logs\Calculator.txt","");
+
             calcDisplay.Text=Convert.ToString(result);
 
             resCheck=true;

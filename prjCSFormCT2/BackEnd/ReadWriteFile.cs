@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace prjCSFormCT2
 {
@@ -58,6 +59,36 @@ namespace prjCSFormCT2
             textwrite.WriteLine(currAmountIn+" "+currIn+" = "+currAmountOut+" "+currOut+",     "+currTime);
 
             textwrite.Close();
+        }
+
+        public static void writeSimpleText(string textpath,string text)
+        {
+            StreamWriter textwrite = new StreamWriter(textpath, true);
+
+            textwrite.WriteLine(text);
+            textwrite.Close();
+
+        }
+
+        public static void binaryWrite(string textpath,string text)
+        {
+            try
+            {
+                FileStream binFStream = new FileStream(textpath, FileMode.Append, FileAccess.Write);
+                BinaryWriter binWriter = new BinaryWriter(binFStream);
+                binWriter.Write(text);
+
+                binWriter.Close();
+                binFStream.Close();
+                
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("error binwriter", "", MessageBoxButtons.OK);
+                return;
+            }
+            
         }
 
         public static string ReadWholeFile(string textpath)

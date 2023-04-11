@@ -20,7 +20,7 @@ namespace prjCSFormCT2
         {
             InitializeComponent();
             timerDurrWin.Start();
-            labelCurrentDate.Text =Convert.ToString(dateNow.ToShortDateString());
+            labelCurrentDate.Text =string.Format("{0:yy/MM/dd}",dateNow);
         }
 
         private void btnConv_Click(object sender, EventArgs e)
@@ -35,6 +35,9 @@ namespace prjCSFormCT2
             if (checkIp==true)
             {
                 MessageBox.Show(userInput + "\nThis Ip is Correct", "Valid Ip", MessageBoxButtons.OK);
+
+                DateTime timeStamp = DateTime.Now;
+                ReadWriteFile.binaryWrite(@"./Logs\IpLogs.txt", userInput+"   "+timeStamp);
 
             }
             else
@@ -66,6 +69,7 @@ namespace prjCSFormCT2
                 TimeSpan timeOnWin = TimeSpan.FromSeconds(timerSecs);
                 string timeId;
                 string timerFormated = timeOnWin.ToString(@"mm\:ss");
+
                 if (timerSecs < 60)
                 {
                     timeId = "seconds";

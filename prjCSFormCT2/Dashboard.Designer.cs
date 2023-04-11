@@ -73,7 +73,7 @@
             this.genTab.Controls.Add(this.gboxLotto);
             this.genTab.Location = new System.Drawing.Point(4, 27);
             this.genTab.Name = "genTab";
-            this.genTab.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.genTab.Padding = new System.Windows.Forms.Padding(3);
             this.genTab.Size = new System.Drawing.Size(672, 379);
             this.genTab.TabIndex = 0;
             this.genTab.Text = "Generated Numbers";
@@ -137,7 +137,7 @@
             this.convTab.Controls.Add(this.gBoxConversion);
             this.convTab.Location = new System.Drawing.Point(4, 27);
             this.convTab.Name = "convTab";
-            this.convTab.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.convTab.Padding = new System.Windows.Forms.Padding(3);
             this.convTab.Size = new System.Drawing.Size(672, 379);
             this.convTab.TabIndex = 1;
             this.convTab.Text = "Conversions";
@@ -201,7 +201,7 @@
             this.calcTab.Controls.Add(this.btnCalc);
             this.calcTab.Location = new System.Drawing.Point(4, 27);
             this.calcTab.Name = "calcTab";
-            this.calcTab.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.calcTab.Padding = new System.Windows.Forms.Padding(3);
             this.calcTab.Size = new System.Drawing.Size(672, 379);
             this.calcTab.TabIndex = 2;
             this.calcTab.Text = "Simple Calculator";
@@ -242,7 +242,7 @@
             // exitbtn
             // 
             this.exitbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exitbtn.Location = new System.Drawing.Point(605, 479);
+            this.exitbtn.Location = new System.Drawing.Point(605, 467);
             this.exitbtn.Name = "exitbtn";
             this.exitbtn.Size = new System.Drawing.Size(114, 31);
             this.exitbtn.TabIndex = 3;
@@ -254,9 +254,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(762, 533);
             this.Controls.Add(this.exitbtn);
             this.Controls.Add(this.menuTabBox);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "Dashboard";
             this.ShowIcon = false;

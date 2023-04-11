@@ -106,6 +106,7 @@ namespace prjCSFormCT2
             return activeMem.Result;
         }
 
+   
         public static void Clear(memCalc activeMem)
         {
             activeMem.Num1 = 0;

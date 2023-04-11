@@ -44,7 +44,7 @@ namespace prjCSFormCT2
                 displayLMax.AppendText(Environment.NewLine); 
             }
             displayid.Text=idTagGen();
-            ReadWriteFile.WriteLottoNum("LottoNbrs.txt",8, lottoNum,"Max");
+            ReadWriteFile.WriteLottoNum(@"./Logs\LottoNbrs.txt", 8, lottoNum,"Max");
         }
         
         public void dupliNumCheck(int position, int[] lottoNum,int rngNum,out bool numCheck)
@@ -96,7 +96,7 @@ namespace prjCSFormCT2
 
         private void btnRead_Click(object sender, EventArgs e)
         {
-            Textpop obj = new Textpop(ReadWriteFile.ReadWholeFile("LottoNbrs.txt"), "Lotto Number Generated");
+            Textpop obj = new Textpop(ReadWriteFile.ReadWholeFile(@"./Logs\LottoNbrs.txt"), "Lotto Number Generated");
             obj.ShowDialog();
             
         }

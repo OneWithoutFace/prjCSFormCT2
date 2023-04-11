@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -27,7 +28,7 @@ namespace prjCSFormCT2
             string currIn="CAD", currOut="USD";
             double currAmountIn, currAmountOut;
 
-            if (tBoxUser.Text=="0")
+            if (tBoxUser.Text=="0"||currRegexCheck(tBoxUser.Text)==false)
             {
                 MessageBox.Show("Enter a number to convert", "MoneyEx", MessageBoxButtons.OK);
                 return;
@@ -79,9 +80,16 @@ namespace prjCSFormCT2
 
             currAmountOut= currConvToUS(currAmountIn, currIn, currOut);
 
-            ReadWriteFile.WriteFileTimeME("Moneyconv.txt", currIn, currOut, currAmountIn, currAmountOut);
+            ReadWriteFile.WriteFileTimeME(@"./Logs\Moneyconv.txt", currIn, currOut, currAmountIn, currAmountOut);
             tBoxConvert.Text = Convert.ToString(currAmountOut);
 
+
+        }
+
+        private bool currRegexCheck(string amountIn)
+        {
+            Regex amountReg = new Regex(@"(\d{1,3})(\.(\d{0,2}))?");
+            return amountReg.IsMatch(amountIn);
 
         }
 
@@ -149,7 +157,7 @@ namespace prjCSFormCT2
 
         private void btnRead_Click(object sender, EventArgs e)
         {
-            Textpop obj = new Textpop(ReadWriteFile.ReadWholeFile("MoneyConv.txt"),"MoneyEx");
+            Textpop obj = new Textpop(ReadWriteFile.ReadWholeFile(@"./Logs\MoneyConv.txt"),"MoneyEx");
             obj.ShowDialog();
 
         }

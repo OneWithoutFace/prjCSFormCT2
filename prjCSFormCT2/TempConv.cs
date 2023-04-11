@@ -57,7 +57,7 @@ namespace prjCSFormCT2
             }
             tBoxMsg.Text = txtMsg;
 
-            ReadWriteFile.WriteFileTemp("TempConv.txt",userTemp,outTemp, userTempSign, outTempsign,txtMsg);
+            ReadWriteFile.WriteFileTemp(@"./Logs\TempConv.txt", userTemp,outTemp, userTempSign, outTempsign,txtMsg);
             tBoxOutput.Text = Convert.ToString(Math.Round(outTemp, 1));
         }
         public static string tempFeel(double tempCel,out string color)
@@ -123,7 +123,7 @@ namespace prjCSFormCT2
 
         private void btnRead_Click(object sender, EventArgs e)
         {
-            Textpop obj = new Textpop(ReadWriteFile.ReadWholeFile("TempConv.txt"), "Temperature Conversion");
+            Textpop obj = new Textpop(ReadWriteFile.ReadWholeFile(@"./Logs\TempConv.txt"), "Temperature Conversion");
             obj.ShowDialog();
 
         }
