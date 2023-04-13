@@ -207,24 +207,30 @@ namespace prjCSFormCT2
             double result;
             string userNum1, userNum2, userOp, userResult;
 
-            if (resCheck==false)
+            try
             {
+                userOp = activeMem.OpType;
+                result = Calculation.Equal(activeMem, Convert.ToDouble(calcDisplay.Text));
+
+                userNum1 = Convert.ToString(activeMem.Num1);
+                userNum2 = Convert.ToString(activeMem.Num2);
+                userResult = Convert.ToString(activeMem.Result);
+
+
+                ReadWriteFile.writeSimpleText(@"./Logs\Calculator.txt", userNum1 + userOp + userNum2 + "=" + userResult);
+
+                calcDisplay.Text = Convert.ToString(result);
+
+                resCheck = true;
+
+            }
+            catch (Exception)
+            {
+                
                 return;
             }
 
-            result=Calculation.Equal(activeMem, Convert.ToDouble(calcDisplay.Text));
-
-            userNum1 = Convert.ToString(activeMem.Num1);
-            userNum2 = Convert.ToString(activeMem.Num2);
-            userOp = activeMem.OpType;
-            userResult = Convert.ToString(activeMem.Result);
-
-
-            ReadWriteFile.writeSimpleText(@"./Logs\Calculator.txt",userNum1+userOp+userNum2+"="+userResult);
-
-            calcDisplay.Text=Convert.ToString(result);
-
-            resCheck=true;
+            
 
         }
 
