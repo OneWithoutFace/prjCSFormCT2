@@ -28,9 +28,9 @@ namespace prjCSFormCT2
             string currIn="CAD", currOut="USD";
             double currAmountIn, currAmountOut;
 
-            if (tBoxUser.Text=="0"||currRegexCheck(tBoxUser.Text)==false)
+            if (tBoxUser.Text=="0"||currRegexCheck(tBoxUser.Text)==false||Convert.ToDouble(tBoxUser.Text)<0)
             {
-                MessageBox.Show("Enter a number to convert", "MoneyEx", MessageBoxButtons.OK);
+                MessageBox.Show("Enter a valid number to convert", "MoneyEx", MessageBoxButtons.OK);
                 return;
             }
 

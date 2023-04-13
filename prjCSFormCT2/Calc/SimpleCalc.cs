@@ -205,12 +205,22 @@ namespace prjCSFormCT2
         private void btnEqual_Click(object sender, EventArgs e)
         {
             double result;
+            string userNum1, userNum2, userOp, userResult;
 
+            if (resCheck==false)
+            {
+                return;
+            }
 
             result=Calculation.Equal(activeMem, Convert.ToDouble(calcDisplay.Text));
 
+            userNum1 = Convert.ToString(activeMem.Num1);
+            userNum2 = Convert.ToString(activeMem.Num2);
+            userOp = activeMem.OpType;
+            userResult = Convert.ToString(activeMem.Result);
 
-            ReadWriteFile.writeSimpleText(@"./Logs\Calculator.txt","");
+
+            ReadWriteFile.writeSimpleText(@"./Logs\Calculator.txt",userNum1+userOp+userNum2+"="+userResult);
 
             calcDisplay.Text=Convert.ToString(result);
 

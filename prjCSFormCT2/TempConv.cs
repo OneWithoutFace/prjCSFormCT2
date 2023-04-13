@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -23,6 +24,11 @@ namespace prjCSFormCT2
             double userTemp, outTemp;
             string color,txtMsg,userTempSign,outTempsign;
 
+            if (tempValid(tBoxInput.Text)==false)
+            {
+                return;
+            }
+            
             userTemp = Convert.ToDouble(tBoxInput.Text);
 
             if (rbtnCtoF.Checked==true)
@@ -41,25 +47,35 @@ namespace prjCSFormCT2
             }
 
             
-            //Why not with read only :(
+            
             switch (color)
             {
                 case "Red":
-                    
+                    tBoxMsg.Text = txtMsg;
                     tBoxMsg.ForeColor = Color.Red;
                     break;
                 case "Green":
+                    tBoxMsg.Text = txtMsg;
                     tBoxMsg.ForeColor = Color.Green;
                     break;
                 case "Blue":
+                    tBoxMsg.Text = txtMsg;
                     tBoxMsg.ForeColor = Color.Blue;
                     break;
             }
-            tBoxMsg.Text = txtMsg;
+            
 
             ReadWriteFile.WriteFileTemp(@"./Logs\TempConv.txt", userTemp,outTemp, userTempSign, outTempsign,txtMsg);
             tBoxOutput.Text = Convert.ToString(Math.Round(outTemp, 1));
         }
+
+        private static bool tempValid(string userTemp)
+        {
+            System.Text.RegularExpressions.Regex checkTemp = new Regex(@"(\-?)(\d)([\.]?)");
+
+            return checkTemp.IsMatch(userTemp);
+        }
+
         public static string tempFeel(double tempCel,out string color)
         {
             string tempMsg="";
