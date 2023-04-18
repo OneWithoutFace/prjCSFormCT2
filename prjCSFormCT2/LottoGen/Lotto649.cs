@@ -20,7 +20,7 @@ namespace prjCSFormCT2
         private void btnGen_Click(object sender, EventArgs e)
         {
             Random rng = new Random();
-            int rdomNum = rng.Next(1, 50);
+            int rdomNum = rng.Next(1, 49);
             int[] lottoNum = new int[7];
             bool numCheck = false;
 
@@ -32,7 +32,7 @@ namespace prjCSFormCT2
                 {
                     do
                     {
-                        rdomNum = rng.Next(1, 10);
+                        rdomNum = rng.Next(1, 49);
                         dupliNumCheck(i, lottoNum, rdomNum, out numCheck);
 
                     } while (numCheck == false);

@@ -32,7 +32,7 @@ namespace prjCSFormCT2
                 {
                     do
                     {
-                        rdomNum = rng.Next(1, 10);
+                        rdomNum = rng.Next(1, 50);
                         dupliNumCheck(i, lottoNum,rdomNum,out numCheck);
 
                     } while (numCheck == false);
